@@ -1,0 +1,5 @@
+corpus,domain,n_pool,n_bench,n_llm_core,median_tokens,p90_tokens,pct_english,closed_form,criterion,criterion_base_rate
+amazon,product,28478,1200,400,25.0,81.0,96.60088489360209,star_rating,repeat_product,0.16995575531989607
+bluesky,social,23325,1200,400,13.0,40.0,65.96355841371918,none,none,
+regulations,public,1563,1200,400,152.0,568.8,99.36020473448497,none,none,
+yelp,service,29999,1200,400,75.0,219.0,99.9099969999,star_rating,repeat_business,0.8372945764858829

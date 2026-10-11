@@ -1,0 +1,123 @@
+{
+  "args": {
+    "models": [
+      "qwen2.5:7b-instruct",
+      "qwen2.5:14b-instruct",
+      "gemma2:27b",
+      "qwen2.5:32b-instruct-q4_K_M"
+    ],
+    "conditions": [
+      "joint",
+      "contrastive"
+    ],
+    "per_corpus": 75,
+    "seed": 20261011,
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "context": 8192,
+    "output": "local_upgrade"
+  },
+  "created_utc": "2026-10-11T06:17:02.182282+00:00",
+  "models": {
+    "qwen2.5:7b-instruct": {
+      "name": "qwen2.5:7b-instruct",
+      "model": "qwen2.5:7b-instruct",
+      "modified_at": "2026-10-08T16:41:07.8686062+07:00",
+      "size": 4683087332,
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "qwen2.5:14b-instruct": {
+      "name": "qwen2.5:14b-instruct",
+      "model": "qwen2.5:14b-instruct",
+      "modified_at": "2026-10-08T17:02:29.1746271+07:00",
+      "size": 8988124069,
+      "digest": "7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "14.8B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 5120,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "gemma2:27b": {
+      "name": "gemma2:27b",
+      "model": "gemma2:27b",
+      "modified_at": "2026-10-11T11:01:14.1148221+07:00",
+      "size": 15628387458,
+      "digest": "53261bc9c192c1cb5fcc898dd3aa15da093f5ab6f08e17e48cf838bb1c58abfe",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "gemma2",
+        "families": [
+          "gemma2"
+        ],
+        "parameter_size": "27.2B",
+        "quantization_level": "Q4_0",
+        "context_length": 8192,
+        "embedding_length": 4608,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion"
+      ]
+    },
+    "qwen2.5:32b-instruct-q4_K_M": {
+      "name": "qwen2.5:32b-instruct-q4_K_M",
+      "model": "qwen2.5:32b-instruct-q4_K_M",
+      "modified_at": "2026-10-11T10:49:25.5251252+07:00",
+      "size": 19851349669,
+      "digest": "9f13ba1299afea09d9a956fc6a85becc99115a6d596fae201a5487a03bdc4368",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "32.8B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 5120,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  },
+  "ollama_version": {
+    "version": "0.40.1"
+  },
+  "n_docs": 300,
+  "protocol": "unconstrained JSON; same sample across all cells; one seed; quantized local inference"
+}

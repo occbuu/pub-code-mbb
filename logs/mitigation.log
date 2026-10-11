@@ -1,0 +1,44 @@
+===== mitigation launch 2026-09-11T08:02:02Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python model=Qwen/Qwen2.5-7B-Instruct n=250 conds=isolated,evidence,gate
+0, 17 MiB, 24096 MiB, 0 %
+1, 888 MiB, 23225 MiB, 0 %
+2, 4038 MiB, 20076 MiB, 0 %
+3, 4008 MiB, 20105 MiB, 0 %
+4, 17334 MiB, 6779 MiB, 20 %
+5, 17374 MiB, 6739 MiB, 17 %
+6, 20300 MiB, 3813 MiB, 100 %
+7, 22188 MiB, 1926 MiB, 45 %
+[2026-09-11T08:02:05Z] stage=mitigation  python=/workspace/anlk/HaoLee/.venv/bin/python
+[2026-09-11T08:02:05Z] cpu_workers=8  OMP_NUM_THREADS=8  CUDA_VISIBLE_DEVICES=(unset)
+[2026-09-11T08:02:05Z] gpu_free  gpu0:24096MiB-free/0%, gpu1:23225MiB-free/0%, gpu2:20076MiB-free/0%, gpu3:20105MiB-free/0%, gpu4:6779MiB-free/5%, gpu5:6739MiB-free/0%, gpu6:3813MiB-free/100%, gpu7:1926MiB-free/46%
+[2026-09-11T08:02:06Z] gpus ready  gpu0:24096MiB, gpu1:23225MiB
+[2026-09-11T08:02:06Z] spawn /workspace/anlk/HaoLee/.venv/bin/python -u /workspace/anlk/HaoLee/BehaveP13/scripts/run_mitigation.py --worker --shard 0 --gpu 0
+[2026-09-11T08:02:06Z] spawn /workspace/anlk/HaoLee/.venv/bin/python -u /workspace/anlk/HaoLee/BehaveP13/scripts/run_mitigation.py --worker --shard 1 --gpu 1
+[2026-09-11T08:34:14Z] worker gpu0 exited 0
+[2026-09-11T08:34:14Z] worker gpu1 exited 0
+[2026-09-11T08:34:14Z] isolated: n=5000 parse=1.000 coverage=0.374
+[2026-09-11T08:34:14Z] evidence: n=5000 parse=0.997 coverage=0.330
+[2026-09-11T08:34:14Z] gate: n=5000 parse=1.000 coverage=0.117
+[2026-09-11T08:34:14Z] {"model": "Qwen/Qwen2.5-7B-Instruct", "conditions": ["isolated", "evidence", "gate"], "seed": 1, "n_docs": 1000, "n_rows": 15000, "temperature": 0.7, "parse_rate": 0.9991333333333333, "run_utc": "2026-09-11T08:34:14Z"}
+[2026-09-11T08:34:14Z] running /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_mitigation_analysis.py
+          condition  n_docs  coverage   halo  pc1_share  convergent  discriminant_margin  criterion_auc
+   joint (baseline)    1000     46.12  0.784      0.829       0.820                0.036          0.573
+           evidence    1000     33.04  0.647      0.722       0.763                0.116          0.587
+               gate    1000     11.72  0.854      0.371       0.843               -0.012          0.522
+           isolated    1000     37.42  0.766      0.814       0.817                0.051          0.557
+joint + PC1 removed    1000     46.12 -0.096      0.341       0.285                0.381          0.522
+
+evidence-condition quote audit:
+construct    n  pct_with_quote  pct_verbatim  coverage
+      ATT 1000            75.6          71.7      72.8
+       BI 1000            31.4          28.0      27.2
+       EE 1000             8.8           8.1       8.4
+       PE 1000            44.1          41.3      42.7
+       SI 1000            17.1          15.6      14.1
+
+wrote t33-t35, results_mitigation.json, f11_mitigation.png
+[2026-09-11T08:34:28Z] mitigation study done
+wrote /workspace/anlk/HaoLee/BehaveP13/build/paper_a.json: 117 blocks, 15 tables, 8 figures, ~4,716 words; PENDING markers=0
+wrote /workspace/anlk/HaoLee/BehaveP13/build/paper_b.json: 87 blocks, 12 tables, 2 figures, ~2,905 words; PENDING markers=0
+wrote /workspace/anlk/HaoLee/BehaveP13/Paper13_PaperA_DRAFT.docx 1451 KB 117 blocks
+wrote /workspace/anlk/HaoLee/BehaveP13/Paper13_PaperB_DRAFT.docx 348 KB 87 blocks

@@ -1,0 +1,2 @@
+corpus,n_convergent,mean_convergent_r,median_convergent_r,mean_heterotrait_monomethod_r,mean_heterotrait_heteromethod_r,criterion1_convergent_gt_030,criterion2_convergent_gt_heterotrait_heteromethod,criterion3_convergent_gt_heterotrait_monomethod,method_variance_index,n_docs
+core_overlap,50,0.46011487984777877,0.4961055283410965,0.5813926594454625,0.4264183625818172,0.68,0.22,0.0,0.15497429686364528,1597

@@ -1,0 +1,10 @@
+{
+  "observed_indicators": 5,
+  "bifactor_status": "not identified: one indicator per specific factor; specific variance confounded with indicator error",
+  "omega_h": null,
+  "omega_hs": null,
+  "ECV": null,
+  "PUC": null,
+  "requirements": "Multiple substantively distinct indicators per construct (typically >=3), validated coding, identified loading/error restrictions. Seeds are repeat ratings, not independent items.",
+  "limitations": "One-factor Gaussian fit is diagnostic for ordinal, selected complete cases; bootstrap is document-level; conditional missingness and author clusters need separate scrutiny."
+}

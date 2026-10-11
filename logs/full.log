@@ -1,0 +1,145 @@
+===== launch 2026-09-10T02:26:19Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=5
+profile=a5000 reps=2000 args=
+0, 13456 MiB, 10657 MiB, 61 %
+1, 14360 MiB, 9754 MiB, 48 %
+2, 10470 MiB, 13644 MiB, 0 %
+3, 14041 MiB, 10072 MiB, 0 %
+4, 4004 MiB, 20109 MiB, 0 %
+5, 5 MiB, 24108 MiB, 0 %
+6, 19540 MiB, 4573 MiB, 47 %
+7, 21427 MiB, 2686 MiB, 100 %
+
+======== stage prep ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_prep.py
+log: /workspace/anlk/HaoLee/BehaveP13/logs/prep.log
+
+stage prep failed with code 1; see /workspace/anlk/HaoLee/BehaveP13/logs/prep.log
+===== launch 2026-09-10T02:36:27Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=5
+profile=a5000 reps=2000 args=
+0, 13548 MiB, 10565 MiB, 58 %
+1, 14392 MiB, 9722 MiB, 50 %
+2, 10470 MiB, 13644 MiB, 100 %
+3, 14041 MiB, 10072 MiB, 0 %
+4, 4004 MiB, 20109 MiB, 0 %
+5, 5 MiB, 24108 MiB, 0 %
+6, 19540 MiB, 4573 MiB, 49 %
+7, 21427 MiB, 2686 MiB, 100 %
+
+======== stage prep ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_prep.py
+log: /workspace/anlk/HaoLee/BehaveP13/logs/prep.log
+
+stage prep ok
+
+======== stage arms12 ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_arms12.py
+log: /workspace/anlk/HaoLee/BehaveP13/logs/arms12.log
+
+stage arms12 ok
+
+======== stage gpu ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_gpu_arms.py --profile a5000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+
+stage gpu failed with code 1; see /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+===== launch 2026-09-10T05:59:55Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=[2026-09-10T05:59:54Z] warning: emptiest GPU 3 has only 10072 MiB free (want >= 18000)
+3
+profile=a5000 reps=2000 args=--from-stage gpu
+0, 16742 MiB, 7371 MiB, 100 %
+1, 15124 MiB, 8990 MiB, 26 %
+2, 19761 MiB, 4352 MiB, 100 %
+3, 14041 MiB, 10072 MiB, 0 %
+4, 24096 MiB, 17 MiB, 44 %
+5, 23636 MiB, 477 MiB, 0 %
+6, 19540 MiB, 4573 MiB, 100 %
+7, 21427 MiB, 2686 MiB, 46 %
+
+======== stage gpu ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_gpu_arms.py --profile a5000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+
+===== launch 2026-09-10T06:44:34Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=0
+profile=a5000 reps=2000 args=--from-stage gpu
+0, 5 MiB, 24108 MiB, 0 %
+1, 888 MiB, 23225 MiB, 0 %
+2, 19761 MiB, 4352 MiB, 100 %
+3, 14041 MiB, 10072 MiB, 0 %
+4, 9548 MiB, 14565 MiB, 0 %
+5, 9548 MiB, 14565 MiB, 0 %
+6, 19540 MiB, 4573 MiB, 46 %
+7, 21427 MiB, 2686 MiB, 100 %
+
+======== stage gpu ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_gpu_arms.py --profile a5000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+
+stage gpu failed with code -9; see /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+===== launch 2026-09-11T02:17:09Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=0
+profile=a5000 reps=2000 args=--from-stage gpu
+0, 13644 MiB, 10469 MiB, 72 %
+1, 14540 MiB, 9574 MiB, 54 %
+2, 4037 MiB, 20076 MiB, 0 %
+3, 17650 MiB, 6464 MiB, 100 %
+4, 5 MiB, 24108 MiB, 0 %
+5, 5 MiB, 24108 MiB, 0 %
+6, 20300 MiB, 3813 MiB, 35 %
+7, 22188 MiB, 1926 MiB, 100 %
+
+======== stage gpu ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_gpu_arms.py --profile a5000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+
+stage gpu failed with code 1; see /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+===== launch 2026-09-11T03:40:59Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python
+cwd=/workspace/anlk/HaoLee/BehaveP13
+cpu_workers=24 affinity=24-47 nice=10
+CUDA_VISIBLE_DEVICES=0
+profile=a5000 reps=2000 args=--from-stage gpu
+0, 13644 MiB, 10469 MiB, 35 %
+1, 14546 MiB, 9568 MiB, 48 %
+2, 4037 MiB, 20076 MiB, 0 %
+3, 17663 MiB, 6450 MiB, 79 %
+4, 17354 MiB, 6759 MiB, 0 %
+5, 17294 MiB, 6819 MiB, 0 %
+6, 20300 MiB, 3813 MiB, 100 %
+7, 22187 MiB, 1926 MiB, 46 %
+
+======== stage gpu ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_gpu_arms.py --profile a5000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/gpu.log
+
+stage gpu ok
+
+======== stage analysis ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_analysis.py
+log: /workspace/anlk/HaoLee/BehaveP13/logs/analysis.log
+
+stage analysis ok
+
+======== stage sim ========
+cmd: /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_simulation.py 2000
+log: /workspace/anlk/HaoLee/BehaveP13/logs/sim.log
+
+stage sim ok
+all stages done in 368s

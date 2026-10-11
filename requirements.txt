@@ -1,0 +1,28 @@
+# Local machine (Notebooks 00, 01, 03, 04 + scripts/run_full.py)
+numpy>=1.26
+pandas>=2.1
+pyarrow>=15
+scipy>=1.11
+scikit-learn>=1.4
+statsmodels>=0.14
+matplotlib>=3.8
+langdetect>=1.0.9
+krippendorff>=0.6          # optional: only for non-interval metrics
+semopy>=2.3                # optional: latent-variable extensions
+factor_analyzer>=0.5       # optional
+pingouin>=0.5              # optional
+jupyter
+
+# GPU arms (scripts/run_gpu_arms.py) -- one GPU, transformers default
+# torch>=2.2                 # already in the workspace venv
+transformers>=4.44
+accelerate
+sentencepiece
+protobuf
+# vllm                       # optional faster backend if installed
+# bitsandbytes               # T4 4-bit profile only
+# bertopic
+# sentence-transformers
+
+# Manuscript build
+# node + the "docx" npm package (npm i docx)

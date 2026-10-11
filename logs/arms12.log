@@ -1,0 +1,26 @@
+
+----- 2026-09-10T09:36:35Z start arms12 -----
+[2026-09-10T02:36:38Z] stage=arms12  python=/workspace/anlk/HaoLee/.venv/bin/python
+[2026-09-10T02:36:38Z] cpu_workers=24  OMP_NUM_THREADS=24  CUDA_VISIBLE_DEVICES=5
+[2026-09-10T02:36:38Z] gpu_free  gpu0:10565MiB-free/45%, gpu1:9662MiB-free/94%, gpu2:13644MiB-free/100%, gpu3:10072MiB-free/0%, gpu4:20109MiB-free/0%, gpu5:24108MiB-free/0%, gpu6:4573MiB-free/80%, gpu7:2686MiB-free/49%
+{'amazon': 28478, 'bluesky': 23325, 'regulations': 1563, 'yelp': 29999} bench 4800 n_jobs 24
+dictionary: 4,800 docs in 1.0s
+construct     ATT    PE    EE    SI    BI
+corpus                                   
+amazon       65.2  26.0  13.2   3.0   8.7
+bluesky      12.8   2.8   1.4   0.9   0.5
+regulations  39.3  34.1  22.0   7.8  10.4
+yelp         90.8  14.8  28.3  16.9  25.8
+topic amazon: K=30 on 28,478 docs in 13s; anchors {'ATT.pos': 40, 'ATT.neg': 40, 'PE.pos': 38, 'PE.neg': 30, 'EE.pos': 30, 'EE.neg': 30, 'SI.pos': 29, 'SI.neg': 13, 'BI.pos': 37, 'BI.neg': 24}
+topic bluesky: K=30 on 23,325 docs in 6s; anchors {'ATT.pos': 37, 'ATT.neg': 29, 'PE.pos': 31, 'PE.neg': 24, 'EE.pos': 24, 'EE.neg': 22, 'SI.pos': 27, 'SI.neg': 10, 'BI.pos': 35, 'BI.neg': 24}
+topic regulations: K=30 on 1,563 docs in 2s; anchors {'ATT.pos': 19, 'ATT.neg': 16, 'PE.pos': 33, 'PE.neg': 24, 'EE.pos': 26, 'EE.neg': 26, 'SI.pos': 26, 'SI.neg': 13, 'BI.pos': 35, 'BI.neg': 25}
+topic yelp: K=30 on 29,999 docs in 40s; anchors {'ATT.pos': 43, 'ATT.neg': 45, 'PE.pos': 34, 'PE.neg': 34, 'EE.pos': 31, 'EE.neg': 29, 'SI.pos': 33, 'SI.neg': 16, 'BI.pos': 37, 'BI.neg': 27}
+[2026-09-10T02:37:43Z] sensitivity: dict_base done
+[2026-09-10T02:37:44Z] sensitivity: dict_no_negation done
+[2026-09-10T02:37:46Z] sensitivity: dict_linear_norm done
+[2026-09-10T02:37:47Z] sensitivity: dict_no_priority done
+[2026-09-10T02:38:29Z] sensitivity: topic_K20 done
+[2026-09-10T02:39:31Z] sensitivity: topic_K30 done
+[2026-09-10T02:41:17Z] sensitivity: topic_K50 done
+[2026-09-10T03:53:13Z] sensitivity: topic_LDA_K30 done
+done

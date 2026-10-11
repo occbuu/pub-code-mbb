@@ -1,0 +1,54 @@
+{
+  "profile": [
+    {
+      "condition": "joint (baseline)",
+      "n_docs": 1000,
+      "coverage": 46.12,
+      "halo": 0.7836,
+      "pc1_share": 0.829,
+      "convergent": 0.8197,
+      "discriminant_margin": 0.036,
+      "criterion_auc": 0.5725
+    },
+    {
+      "condition": "evidence",
+      "n_docs": 1000,
+      "coverage": 33.04,
+      "halo": 0.6465,
+      "pc1_share": 0.7221,
+      "convergent": 0.7628,
+      "discriminant_margin": 0.1163,
+      "criterion_auc": 0.5866
+    },
+    {
+      "condition": "gate",
+      "n_docs": 1000,
+      "coverage": 11.72,
+      "halo": 0.8542,
+      "pc1_share": 0.3708,
+      "convergent": 0.8426,
+      "discriminant_margin": -0.0117,
+      "criterion_auc": 0.5218
+    },
+    {
+      "condition": "isolated",
+      "n_docs": 1000,
+      "coverage": 37.42,
+      "halo": 0.7663,
+      "pc1_share": 0.8138,
+      "convergent": 0.8174,
+      "discriminant_margin": 0.0511,
+      "criterion_auc": 0.5571
+    },
+    {
+      "condition": "joint + PC1 removed",
+      "n_docs": 1000,
+      "coverage": 46.12,
+      "halo": -0.0962,
+      "pc1_share": 0.3409,
+      "convergent": 0.2847,
+      "discriminant_margin": 0.3809,
+      "criterion_auc": 0.5219
+    }
+  ]
+}

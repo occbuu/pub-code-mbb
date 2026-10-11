@@ -1,0 +1,9 @@
+model,condition,n_attempts,schema_valid_rate,truncated_rate
+gemma2:27b,contrastive,300,0.9666666666666667,0.0
+gemma2:27b,joint,300,0.9633333333333334,0.0
+qwen2.5:14b-instruct,contrastive,300,0.9933333333333333,0.0
+qwen2.5:14b-instruct,joint,300,0.9666666666666667,0.0
+qwen2.5:32b-instruct-q4_K_M,contrastive,300,0.9666666666666667,0.0
+qwen2.5:32b-instruct-q4_K_M,joint,300,0.9866666666666667,0.0
+qwen2.5:7b-instruct,contrastive,300,0.9833333333333333,0.0
+qwen2.5:7b-instruct,joint,300,0.9766666666666667,0.0

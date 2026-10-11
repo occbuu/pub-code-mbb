@@ -1,0 +1,42 @@
+{
+  "n_docs": 4800,
+  "n_methods": 4,
+  "methods": [
+    "DICT",
+    "ENCODER",
+    "LLM",
+    "TOPIC"
+  ],
+  "n_corpora": 4,
+  "mean_between_method_r": 0.4141821678474966,
+  "min_between_method_r": -0.1674648444401594,
+  "max_between_method_r": 0.919903106385348,
+  "mean_convergent_r": 0.6109748223883846,
+  "best_method_convergent": "ENCODER",
+  "mean_criterion_auc": 0.5416058581110185,
+  "mean_coverage": 56.289583333333326,
+  "convergent_by_method": {
+    "DICT": 0.424,
+    "ENCODER": 0.858,
+    "LLM": 0.807,
+    "TOPIC": 0.355
+  },
+  "coverage_by_method": {
+    "DICT": 21.2,
+    "ENCODER": 68.1,
+    "LLM": 40.8,
+    "TOPIC": 95.0
+  },
+  "mtmm_mean_convergent_r": 0.40475115038671505,
+  "mtmm_mean_heterotrait_monomethod_r": 0.5609335505319594,
+  "mtmm_mean_heterotrait_heteromethod_r": 0.34769665373249437,
+  "mtmm_method_variance_index": 0.21323689679946506,
+  "mtmm_criterion2_convergent_gt_heterotrait_heteromethod": 0.2135064935064935,
+  "mtmm_criterion3_convergent_gt_heterotrait_monomethod": 0.05142857142857142,
+  "corpora": [
+    "amazon",
+    "bluesky",
+    "regulations",
+    "yelp"
+  ]
+}

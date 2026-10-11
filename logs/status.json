@@ -1,0 +1,11 @@
+{
+  "stage": "orchestrator",
+  "state": "done",
+  "pid": 1816963,
+  "planned": [
+    "gpu",
+    "analysis",
+    "sim"
+  ],
+  "elapsed_s": 367.5
+}

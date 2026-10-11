@@ -1,0 +1,55 @@
+
+----- 2026-09-11T10:45:59Z start analysis -----
+[2026-09-11T03:46:28Z] stage=analysis  python=/workspace/anlk/HaoLee/.venv/bin/python
+[2026-09-11T03:46:28Z] cpu_workers=24  OMP_NUM_THREADS=24  CUDA_VISIBLE_DEVICES=0
+[2026-09-11T03:46:28Z] gpu_free  gpu0:10182MiB-free/15%, gpu1:9568MiB-free/53%, gpu2:20076MiB-free/0%, gpu3:6450MiB-free/40%, gpu4:6759MiB-free/0%, gpu5:6819MiB-free/0%, gpu6:3813MiB-free/46%, gpu7:1926MiB-free/100%
+methods present: ['DICT', 'TOPIC', 'ENCODER', 'LLM']
+long rows: 96000 | docs: 4800
+     corpus  n_docs  mean_convergent_r  mean_heterotrait_monomethod_r  mean_heterotrait_heteromethod_r  method_variance_index
+        all    4790              0.446                          0.549                            0.404                  0.145
+     amazon    1200              0.548                          0.628                            0.476                  0.152
+    bluesky    1191              0.268                          0.605                            0.177                  0.428
+regulations    1199              0.263                          0.456                            0.236                  0.220
+       yelp    1200              0.498                          0.567                            0.446                  0.121
+{
+  "n_docs": 4800,
+  "n_methods": 4,
+  "methods": [
+    "DICT",
+    "ENCODER",
+    "LLM",
+    "TOPIC"
+  ],
+  "n_corpora": 4,
+  "mean_between_method_r": 0.4141821678474966,
+  "min_between_method_r": -0.1674648444401594,
+  "max_between_method_r": 0.919903106385348,
+  "mean_convergent_r": 0.6109748223883846,
+  "best_method_convergent": "ENCODER",
+  "mean_criterion_auc": 0.5416058581110185,
+  "mean_coverage": 56.289583333333326,
+  "convergent_by_method": {
+    "DICT": 0.424,
+    "ENCODER": 0.858,
+    "LLM": 0.807,
+    "TOPIC": 0.355
+  },
+  "coverage_by_method": {
+    "DICT": 21.2,
+    "ENCODER": 68.1,
+    "LLM": 40.8,
+    "TOPIC": 95.0
+  },
+  "mtmm_mean_convergent_r": 0.40475115038671505,
+  "mtmm_mean_heterotrait_monomethod_r": 0.5609335505319594,
+  "mtmm_mean_heterotrait_heteromethod_r": 0.34769665373249437,
+  "mtmm_method_variance_index": 0.21323689679946506,
+  "mtmm_criterion2_convergent_gt_heterotrait_heteromethod": 0.2135064935064935,
+  "mtmm_criterion3_convergent_gt_heterotrait_monomethod": 0.05142857142857142,
+  "corpora": [
+    "amazon",
+    "bluesky",
+    "regulations",
+    "yelp"
+  ]
+}

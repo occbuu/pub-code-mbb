@@ -1,0 +1,27 @@
+{
+  "n_overlap": 1600,
+  "halo_by_method": {
+    "DICT": 0.19481359200815884,
+    "TOPIC": 0.2795546217189869,
+    "ENCODER": 0.9354787001348018,
+    "LLM": 0.7735975173678977,
+    "LLM2": 0.6848609592537369
+  },
+  "qwen_mistral_mean_r": 0.7159661652539948,
+  "campbell_fiske_5method": [
+    {
+      "corpus": "core_overlap",
+      "n_convergent": 50,
+      "mean_convergent_r": 0.46011487984777877,
+      "median_convergent_r": 0.4961055283410965,
+      "mean_heterotrait_monomethod_r": 0.5813926594454625,
+      "mean_heterotrait_heteromethod_r": 0.4264183625818172,
+      "criterion1_convergent_gt_030": 0.68,
+      "criterion2_convergent_gt_heterotrait_heteromethod": 0.22,
+      "criterion3_convergent_gt_heterotrait_monomethod": 0.0,
+      "method_variance_index": 0.15497429686364528,
+      "n_docs": 1597
+    }
+  ],
+  "model": "mistralai/Mistral-7B-Instruct-v0.2"
+}

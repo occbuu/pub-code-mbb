@@ -1,0 +1,71 @@
+===== llm2 launch 2026-09-11T05:14:47Z =====
+python=/workspace/anlk/HaoLee/.venv/bin/python model=mistralai/Mistral-7B-Instruct-v0.2
+cpus=36 affinity=24-59 gpus=0,1
+0, 483 MiB, 23631 MiB, 0 %
+1, 888 MiB, 23225 MiB, 0 %
+2, 4038 MiB, 20076 MiB, 0 %
+3, 4008 MiB, 20105 MiB, 0 %
+4, 9572 MiB, 14541 MiB, 42 %
+5, 9630 MiB, 14483 MiB, 100 %
+6, 20300 MiB, 3813 MiB, 44 %
+7, 22188 MiB, 1926 MiB, 100 %
+[2026-09-11T05:14:50Z] stage=llm2  python=/workspace/anlk/HaoLee/.venv/bin/python
+[2026-09-11T05:14:50Z] cpu_workers=36  OMP_NUM_THREADS=36  CUDA_VISIBLE_DEVICES=(unset)
+[2026-09-11T05:14:50Z] gpu_free  gpu0:23631MiB-free/0%, gpu1:23225MiB-free/0%, gpu2:20076MiB-free/0%, gpu3:20105MiB-free/0%, gpu4:14541MiB-free/0%, gpu5:14483MiB-free/100%, gpu6:3813MiB-free/45%, gpu7:1926MiB-free/100%
+[2026-09-11T05:14:50Z] gpus ready  gpu0:23631MiB, gpu1:23225MiB
+[2026-09-11T05:14:50Z] spawn /workspace/anlk/HaoLee/.venv/bin/python -u /workspace/anlk/HaoLee/BehaveP13/scripts/run_llm2.py --worker --shard 0 --gpu 0
+[2026-09-11T05:14:50Z] spawn /workspace/anlk/HaoLee/.venv/bin/python -u /workspace/anlk/HaoLee/BehaveP13/scripts/run_llm2.py --worker --shard 1 --gpu 1
+[2026-09-11T06:15:20Z] worker gpu0 exited 0
+[2026-09-11T06:15:52Z] worker gpu1 exited 0
+[2026-09-11T06:15:52Z] merged llm2_core_zeroshot_s1.parquet n=1600 parse=0.789
+[2026-09-11T06:15:52Z] merged llm2_core_zeroshot_s2.parquet n=1600 parse=0.792
+[2026-09-11T06:15:52Z] merged llm2_core_zeroshot_s3.parquet n=1600 parse=0.790
+[2026-09-11T06:15:52Z] {"model": "mistralai/Mistral-7B-Instruct-v0.2", "variant": "zeroshot", "seeds": [1, 2, 3], "n": 4800, "n_docs": 1600, "parse_rate": 0.7904166666666667, "run_utc": "2026-09-11T06:15:52Z", "gpus": [0, 1]}
+[2026-09-11T06:15:52Z] running /workspace/anlk/HaoLee/.venv/bin/python /workspace/anlk/HaoLee/BehaveP13/scripts/run_llm2_analysis.py
+[2026-09-11T06:15:57Z] stage=llm2-analysis  python=/workspace/anlk/HaoLee/.venv/bin/python
+[2026-09-11T06:15:57Z] cpu_workers=36  OMP_NUM_THREADS=36  CUDA_VISIBLE_DEVICES=(unset)
+[2026-09-11T06:15:57Z] gpu_free  gpu0:24096MiB-free/0%, gpu1:23225MiB-free/0%, gpu2:20076MiB-free/0%, gpu3:20105MiB-free/0%, gpu4:6759MiB-free/0%, gpu5:6779MiB-free/0%, gpu6:3813MiB-free/45%, gpu7:1926MiB-free/44%
+methods: ['DICT', 'TOPIC', 'ENCODER', 'LLM', 'LLM2'] llm2 docs 1600
+overlap Qwen ∩ Mistral: 1600
+corpus  method  n_pairs  mean_halo_r  median_halo_r  min_r  max_r
+   all    DICT        9        0.195          0.142 -0.052  0.507
+   all ENCODER       10        0.935          0.943  0.870  0.974
+   all     LLM       10        0.774          0.781  0.628  0.891
+   all    LLM2       10        0.685          0.729  0.321  0.948
+   all   TOPIC       10        0.280          0.271  0.132  0.537
+corpus construct method_a method_b   n     r   p   rho  alpha
+   all       ATT      LLM     LLM2 900 0.796 0.0 0.798  0.796
+   all        PE      LLM     LLM2 288 0.729 0.0 0.765  0.729
+   all        EE      LLM     LLM2 241 0.697 0.0 0.718  0.697
+   all        SI      LLM     LLM2 187 0.491 0.0 0.495  0.493
+   all        BI      LLM     LLM2 146 0.867 0.0 0.855  0.867
+      corpus  n_convergent  mean_convergent_r  median_convergent_r  mean_heterotrait_monomethod_r  mean_heterotrait_heteromethod_r  criterion1_convergent_gt_030  criterion2_convergent_gt_heterotrait_heteromethod  criterion3_convergent_gt_heterotrait_monomethod  method_variance_index  n_docs
+core_overlap            50               0.46                0.496                          0.581                            0.426                          0.68                                               0.22                                              0.0                  0.155    1597
+{
+  "n_overlap": 1600,
+  "halo_by_method": {
+    "DICT": 0.19481359200815884,
+    "TOPIC": 0.2795546217189869,
+    "ENCODER": 0.9354787001348018,
+    "LLM": 0.7735975173678977,
+    "LLM2": 0.6848609592537369
+  },
+  "qwen_mistral_mean_r": 0.7159661652539948,
+  "campbell_fiske_5method": [
+    {
+      "corpus": "core_overlap",
+      "n_convergent": 50,
+      "mean_convergent_r": 0.46011487984777877,
+      "median_convergent_r": 0.4961055283410965,
+      "mean_heterotrait_monomethod_r": 0.5813926594454625,
+      "mean_heterotrait_heteromethod_r": 0.4264183625818172,
+      "criterion1_convergent_gt_030": 0.68,
+      "criterion2_convergent_gt_heterotrait_heteromethod": 0.22,
+      "criterion3_convergent_gt_heterotrait_monomethod": 0.0,
+      "method_variance_index": 0.15497429686364528,
+      "n_docs": 1597
+    }
+  ],
+  "model": "mistralai/Mistral-7B-Instruct-v0.2"
+}
+[2026-09-11T06:16:00Z] llm2 family arm done
