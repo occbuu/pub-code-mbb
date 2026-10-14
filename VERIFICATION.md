@@ -81,3 +81,28 @@ The native-language sentence says the four non-attitude constructs are detected
 in at most 6% of posts. Table 9 prints 6.1 for Portuguese performance
 expectancy (`tables/t27b_native_nonenglish.csv`, 6.0606). The table is the
 precise figure.
+
+## Frontier arm (Claude, same 300 documents)
+
+Checked on 14 October 2026 from `logs/13b_claude_frontier.log` (ends with
+`COMPLETE`) and `frontier/`. The API calls were not repeated for this check.
+No open-weight 70B model was run. Sampling is the provider default: the API
+rejected a client temperature, and no seed was sent.
+
+| Manuscript | Source | Logged value |
+| --- | --- | --- |
+| Sonnet joint schema 90.0%, truncated 10.0% | `frontier/claude_parse_audit.csv` | 0.900, 0.100 |
+| Sonnet contrastive schema 82.7%, truncated 17.7% | `frontier/claude_parse_audit.csv` | 0.826667, 0.176667 |
+| Opus joint schema 71.7%, truncated 28.3% | `frontier/claude_parse_audit.csv` | 0.716667, 0.283333 |
+| Opus contrastive schema 75.0%, truncated 25.3% | `frontier/claude_parse_audit.csv` | 0.750, 0.253333 |
+| Sonnet joint halo 0.786, 8 pairs, coverage 39.7%, complete n = 12 | `frontier/claude_structure_audit.csv` | 0.786416, 8, 0.396667, 12 |
+| Sonnet contrastive halo 0.876, 6 pairs, coverage 31.5%, complete n = 4 | `frontier/claude_structure_audit.csv` | 0.876119, 6, 0.314667, 4 |
+| Opus joint halo 0.806, 8 pairs, coverage 31.6%, complete n = 9 | `frontier/claude_structure_audit.csv` | 0.806156, 8, 0.316000, 9 |
+| Opus contrastive halo 0.824, 8 pairs, coverage 31.5%, complete n = 9 | `frontier/claude_structure_audit.csv` | 0.823863, 8, 0.314667, 9 |
+
+PC1 is withheld for every frontier row because complete-case n is below 30.
+On matched supports, five of ten pairs are estimable for each model. The mean
+matched Δr is +0.00658 for Sonnet and +0.00190 for Opus
+(`frontier/claude_matched_support.csv`). Every reported interval includes zero.
+Credit-balance errors from an interrupted Opus attempt remain in the log;
+later successful rows are the ones kept in `frontier/claude_scores.csv`.

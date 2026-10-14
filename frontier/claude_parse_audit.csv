@@ -1,0 +1,5 @@
+model,condition,n,schema_valid_rate,truncated_rate
+claude-opus-5-5,contrastive,300,0.75,0.25333333333333335
+claude-opus-5-5,joint,300,0.7166666666666667,0.2833333333333333
+claude-sonnet-5-5,contrastive,300,0.8266666666666667,0.17666666666666667
+claude-sonnet-5-5,joint,300,0.9,0.1

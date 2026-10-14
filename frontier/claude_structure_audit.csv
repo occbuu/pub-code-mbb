@@ -1,0 +1,5 @@
+method,corpus,n_docs,n_complete,coverage,pair_min_n,n_estimable_pairs,halo_pairwise,pc1_total_variance_complete
+claude-opus-5-5/contrastive,pooled,300,9,0.31466666666666665,16,8,0.8238634155289275,
+claude-opus-5-5/joint,pooled,300,9,0.316,20,8,0.8061557811781044,
+claude-sonnet-5-5/contrastive,pooled,300,4,0.31466666666666665,9,6,0.876119055201451,
+claude-sonnet-5-5/joint,pooled,300,12,0.39666666666666667,17,8,0.7864163799565628,

@@ -1,0 +1,28 @@
+{
+  "arm": "proprietary frontier on the existing 300-document local sample",
+  "models": ["claude-sonnet-5-5", "claude-opus-5-5"],
+  "conditions": ["joint", "contrastive"],
+  "n_documents": 300,
+  "documents_per_corpus": 75,
+  "corpora": ["amazon", "bluesky", "regulations", "yelp"],
+  "document_ids": "the same identifiers as upgrade/local_scores.csv",
+  "calls": 1200,
+  "max_tokens": 512,
+  "sampling": "provider default; the API rejected a client temperature, and no seed was sent",
+  "api": "Anthropic Messages API, anthropic-version 2023-06-01",
+  "credential": "ANTHROPIC_API_KEY environment variable only; not stored in this package",
+  "omitted": [
+    "source document text",
+    "prompts",
+    "raw generations.jsonl (response text can quote the source)"
+  ],
+  "published_tables": [
+    "claude_scores.csv",
+    "claude_parse_audit.csv",
+    "claude_structure_audit.csv",
+    "claude_matched_support.csv"
+  ],
+  "log": "logs/13b_claude_frontier.log ends with COMPLETE after both models finished 300 x 2",
+  "bootstrap": "1,000 paired document replicates, seed 20261011, exploratory unadjusted intervals",
+  "missingness": "invalid JSON fields stay missing; truncation is not recoded as absence"
+}
